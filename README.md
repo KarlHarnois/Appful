@@ -1,8 +1,12 @@
 # Appful
 
-## API Backend URL (TBD)
+## API Backend URL
 
-### Authentication Endpoint (TBD)
+An apiary mock backend is listening at `http://private-0299c-appfulapi.apiary-mock.com`
+
+### Authentication Endpoint
+
+For the API documentation please refer to the [docs](http://docs.appfulapi.apiary.io/)
 
 ## Contributing
 
