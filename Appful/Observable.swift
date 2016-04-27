@@ -48,11 +48,20 @@ class Observable<A> {
     
     // API
     
-    func subscribe(onSuccess onSuccess: A -> Void, onError: ErrorType -> Void, onComplete: () -> Void){
-        successHandler = onSuccess
-        errorHandler = onError
-        completionHandler = onComplete
+    func onSuccess(handler: A -> Void) -> Observable<A>{
+        successHandler = handler
+        return self
     }
+    
+    func onError(handler: ErrorType -> Void) -> Observable<A>{
+        errorHandler = handler
+        return self
+    }
+    
+    func onComplete(handler: () -> Void){
+        completionHandler = handler
+    }
+    
     
     static func create(unit: Observable<A> -> ()) -> Observable<A> {
         let observable = Observable<A>()

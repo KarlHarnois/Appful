@@ -16,13 +16,15 @@ func authentication(email: String, _ password: String) -> Observable<User?> {
             } else if let jsonData = data{
                 if let authenticationToken = token(jsonData) {
                     userObservable(authenticationToken)
-                        .subscribe(onSuccess: { user in
+                        .onSuccess{ user in
                             observer.success = user
-                        }, onError: { error in
+                        }
+                        .onError{ error in
                             observer.error = error
-                        }, onComplete: {
+                        }
+                        .onComplete{
                             observer.complete = true
-                        })
+                        }
                 }
             } else {
                 print("happened")

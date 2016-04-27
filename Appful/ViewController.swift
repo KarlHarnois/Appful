@@ -18,14 +18,16 @@ class ViewController: UIViewController {
         let password = self.password.text ?? ""
         
         authentication(email, password)
-            .subscribe(onSuccess: { user in
+            .onSuccess{ user in
                 self.user = user
-            }, onError: { error in
+            }
+            .onError{ error in
                 print(error)
-            }, onComplete: {
+            }
+            .onComplete{
                 ActivityIndicator.hide()
                 self.checkUser()
-            })
+            }
     }
     
     private func checkUser() {
