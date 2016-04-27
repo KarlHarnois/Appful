@@ -35,6 +35,12 @@ class Observable<A> {
     
     init(){}
     
+    static func create(unit: Observable<A> -> ()) -> Observable<A> {
+        let observable = Observable<A>()
+        unit(observable)
+        return observable
+    }
+    
     private func process(){
         if let value = self.success, let handler = successHandler {
             handler(value)
@@ -46,7 +52,9 @@ class Observable<A> {
         }
     }
     
-    // API
+    //
+    // Subscription API
+    // 
     
     func onSuccess(handler: A -> Void) -> Observable<A>{
         successHandler = handler
@@ -62,10 +70,35 @@ class Observable<A> {
         completionHandler = handler
     }
     
+    //
+    // Composition API
+    //
     
-    static func create(unit: Observable<A> -> ()) -> Observable<A> {
-        let observable = Observable<A>()
-        unit(observable)
-        return observable
+    func flatMap<B>(f: A -> Observable<B>) -> Observable<B>{
+        return Observable<B>.create{ observer in
+            return self
+                .onSuccess{ (x: A) in
+                    let observable: Observable<B> = f(x)
+                    observable
+                        .onSuccess{ (y: B) in
+                            observer.success = y
+                        }
+                        .onError{ error in
+                            observer.error = error
+                        }
+                        .onComplete{
+                           observer.complete = true
+                        }
+                }
+                .onError{ error in
+                    observer.error = error
+                }
+                .onComplete{
+                }
+        }
     }
 }
+
+
+
+

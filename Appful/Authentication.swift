@@ -8,26 +8,20 @@
 
 import Foundation
 
-func authentication(email: String, _ password: String) -> Observable<User?> {
+func authentication(email: String, _ password: String) -> Observable<User?>{
+    return tokenObservable(email, password).flatMap(userObservable)
+}
+
+private func tokenObservable(email: String, _ password: String) -> Observable<String> {
     return Observable.create{ observer in
         fetchToken(email, password){ data, _, error in
             if let err = error {
                 observer.error = err
             } else if let jsonData = data{
                 if let authenticationToken = token(jsonData) {
-                    userObservable(authenticationToken)
-                        .onSuccess{ user in
-                            observer.success = user
-                        }
-                        .onError{ error in
-                            observer.error = error
-                        }
-                        .onComplete{
-                            observer.complete = true
-                        }
+                    observer.success = authenticationToken
                 }
             } else {
-                print("happened")
                 observer.complete = true
             }
         }

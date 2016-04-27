@@ -113,7 +113,7 @@
 			children = (
 				2AB140EE1CD0D0CE007740A0 /* AppDelegate.swift */,
 				B4A8400D1CD15C7A005CE27F /* ActivityIndicator.swift */,
-				B4A840131CD170C9005CE27F /* Observable.swift */,
+				B4A840181CD181BC005CE27F /* Observable */,
 				B4A840151CD179A1005CE27F /* Networking */,
 				B4A840021CD142F7005CE27F /* Controllers */,
 				B4A840011CD142E2005CE27F /* Resources */,
@@ -168,6 +168,14 @@
 				B4A8400F1CD16371005CE27F /* Authentication.swift */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		B4A840181CD181BC005CE27F /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				B4A840131CD170C9005CE27F /* Observable.swift */,
+			);
+			name = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
