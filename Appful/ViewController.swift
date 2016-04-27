@@ -21,16 +21,28 @@ class ViewController: UIViewController {
   }
 
   override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-    return isAuthenticated;
+    return isAuthenticated
   }
 
   func authenticate() -> Bool {
-    /*
-     * TODO: Pending implementation
-     *
-     * Authenticate user with the API
-     */
-
+    UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+    let email = self.email.text ?? ""
+    let password = self.password.text ?? ""
+    fetchAuthenticationToken(email, password){ data, response, error in
+        if let err = error {
+            print(err)
+            self.isAuthenticated = false
+        } else if let jsonData = data, let currentResponse = response as? NSHTTPURLResponse {
+            let result = try? NSJSONSerialization.JSONObjectWithData(jsonData, options: []) as? [String: AnyObject]
+            if let jsonResult = result {
+                let token = jsonResult!["token"] as? String
+                let statusCode = currentResponse.statusCode
+                print(token)
+                print(statusCode)
+            }
+        }
+    }
+    UIApplication.sharedApplication().networkActivityIndicatorVisible = false
     return isAuthenticated
   }
 

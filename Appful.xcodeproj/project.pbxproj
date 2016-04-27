@@ -15,6 +15,7 @@
 		2AB141041CD0D0CE007740A0 /* AppfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB141031CD0D0CE007740A0 /* AppfulTests.swift */; };
 		2AB1410F1CD0D0CE007740A0 /* AppfulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1410E1CD0D0CE007740A0 /* AppfulUITests.swift */; };
 		2AB1411D1CD0E042007740A0 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1411C1CD0E042007740A0 /* AccountController.swift */; };
+		B4A840001CD13020005CE27F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A83FFF1CD13020005CE27F /* Authentication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2AB1410E1CD0D0CE007740A0 /* AppfulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppfulUITests.swift; sourceTree = "<group>"; };
 		2AB141101CD0D0CE007740A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB1411C1CD0E042007740A0 /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		B4A83FFF1CD13020005CE27F /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				2AB140EE1CD0D0CE007740A0 /* AppDelegate.swift */,
 				2AB140F01CD0D0CE007740A0 /* ViewController.swift */,
+				B4A83FFF1CD13020005CE27F /* Authentication.swift */,
 				2AB1411C1CD0E042007740A0 /* AccountController.swift */,
 				2AB140F21CD0D0CE007740A0 /* Main.storyboard */,
 				2AB140F51CD0D0CE007740A0 /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 				2AB1411D1CD0E042007740A0 /* AccountController.swift in Sources */,
 				2AB140F11CD0D0CE007740A0 /* ViewController.swift in Sources */,
 				2AB140EF1CD0D0CE007740A0 /* AppDelegate.swift in Sources */,
+				B4A840001CD13020005CE27F /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +490,7 @@
 				2AB141151CD0D0CE007740A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AB141161CD0D0CE007740A0 /* Build configuration list for PBXNativeTarget "AppfulTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +499,7 @@
 				2AB141181CD0D0CE007740A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AB141191CD0D0CE007740A0 /* Build configuration list for PBXNativeTarget "AppfulUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +508,7 @@
 				2AB1411B1CD0D0CE007740A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
