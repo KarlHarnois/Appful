@@ -38,7 +38,6 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="perform:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPt-mz-QZV"/>
-                                            <segue destination="icV-bB-tKg" kind="show" identifier="showAccount" id="YXR-KL-rGR"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authencation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-yb-gNl">
@@ -87,6 +86,7 @@
                         <outlet property="email" destination="fXL-2i-pkP" id="ha5-cy-fgx"/>
                         <outlet property="login" destination="4vH-W8-mr6" id="9Z5-xC-dVk"/>
                         <outlet property="password" destination="QUu-By-Gxn" id="2Uq-nX-t0L"/>
+                        <segue destination="icV-bB-tKg" kind="show" identifier="showAccount" id="JST-4O-zOY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +105,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello {name}!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCF-UH-i3a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCF-UH-i3a">
                                 <rect key="frame" x="106" y="317" width="163" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

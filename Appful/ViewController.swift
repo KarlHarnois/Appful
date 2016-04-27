@@ -1,37 +1,41 @@
 import UIKit
 
-class ViewController: UIViewController, AuthenticationDelegate {
+class ViewController: UIViewController {
     
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    var authenticationManager: AuthenticationManager?
-    var user: User?
+    var user: User? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(user)
-        authenticationManager = AuthenticationManager(delegate: self)
     }
 
     @IBAction func perform(sender: AnyObject) {
         ActivityIndicator.show()
         let email = self.email.text ?? ""
         let password = self.password.text ?? ""
-        authenticationManager?.authentication(email, password)
+        
+        authentication(email, password)
+            .subscribe(onSuccess: { user in
+                self.user = user
+            }, onError: { error in
+                print(error)
+            }, onComplete: {
+                ActivityIndicator.hide()
+                self.checkUser()
+            })
     }
     
-    func authenticationResult(user: User?) {
-        ActivityIndicator.hide()
-        self.user = user
+    private func checkUser() {
         dispatch_sync(dispatch_get_main_queue()) {
-            self.performSegueWithIdentifier("showAccount", sender: self)
+            if self.user == nil {
+                self.showAuthenticationError()
+            } else {
+                self.performSegueWithIdentifier("showAccount", sender: self)
+            }
         }
-    }
-    
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        return user != nil
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -19,7 +19,8 @@
 		B4A840081CD14479005CE27F /* JsonLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840071CD14479005CE27F /* JsonLibrary.swift */; };
 		B4A8400A1CD1464C005CE27F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840091CD1464C005CE27F /* Account.swift */; };
 		B4A8400E1CD15C7A005CE27F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8400D1CD15C7A005CE27F /* ActivityIndicator.swift */; };
-		B4A840101CD16371005CE27F /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8400F1CD16371005CE27F /* AuthenticationManager.swift */; };
+		B4A840101CD16371005CE27F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8400F1CD16371005CE27F /* Authentication.swift */; };
+		B4A840141CD170C9005CE27F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840131CD170C9005CE27F /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +59,8 @@
 		B4A840071CD14479005CE27F /* JsonLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonLibrary.swift; sourceTree = "<group>"; };
 		B4A840091CD1464C005CE27F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		B4A8400D1CD15C7A005CE27F /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		B4A8400F1CD16371005CE27F /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		B4A8400F1CD16371005CE27F /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		B4A840131CD170C9005CE27F /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,8 @@
 				B4A840071CD14479005CE27F /* JsonLibrary.swift */,
 				B4A83FFF1CD13020005CE27F /* Token.swift */,
 				B4A840091CD1464C005CE27F /* Account.swift */,
-				B4A8400F1CD16371005CE27F /* AuthenticationManager.swift */,
+				B4A8400F1CD16371005CE27F /* Authentication.swift */,
+				B4A840131CD170C9005CE27F /* Observable.swift */,
 				B4A840021CD142F7005CE27F /* Controllers */,
 				B4A840011CD142E2005CE27F /* Resources */,
 			);
@@ -291,9 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB1411D1CD0E042007740A0 /* AccountController.swift in Sources */,
-				B4A840101CD16371005CE27F /* AuthenticationManager.swift in Sources */,
+				B4A840101CD16371005CE27F /* Authentication.swift in Sources */,
 				2AB140F11CD0D0CE007740A0 /* ViewController.swift in Sources */,
 				2AB140EF1CD0D0CE007740A0 /* AppDelegate.swift in Sources */,
+				B4A840141CD170C9005CE27F /* Observable.swift in Sources */,
 				B4A840001CD13020005CE27F /* Token.swift in Sources */,
 				B4A840081CD14479005CE27F /* JsonLibrary.swift in Sources */,
 				B4A8400A1CD1464C005CE27F /* Account.swift in Sources */,
