@@ -1,7 +1,10 @@
 import UIKit
 
 class AccountController: UIViewController {
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
+    
+    @IBOutlet weak var welcomeMsgLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }

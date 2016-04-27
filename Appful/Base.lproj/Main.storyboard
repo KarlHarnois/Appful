@@ -104,10 +104,25 @@
                     <view key="view" contentMode="scaleToFill" id="heU-pZ-4aZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello {name}!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCF-UH-i3a">
+                                <rect key="frame" x="106" y="317" width="163" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.2901960784" green="0.4823529412" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="MCF-UH-i3a" firstAttribute="centerX" secondItem="heU-pZ-4aZ" secondAttribute="centerX" id="8fJ-kQ-8De"/>
+                            <constraint firstItem="MCF-UH-i3a" firstAttribute="centerY" secondItem="heU-pZ-4aZ" secondAttribute="centerY" id="rOE-89-Wlg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wXZ-lb-N3U"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="welcomeMsgLabel" destination="MCF-UH-i3a" id="9mN-dt-WvC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNn-wE-LUg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
