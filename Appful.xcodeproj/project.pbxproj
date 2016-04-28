@@ -15,6 +15,8 @@
 		2AB1410F1CD0D0CE007740A0 /* AppfulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1410E1CD0D0CE007740A0 /* AppfulUITests.swift */; };
 		2AB1411D1CD0E042007740A0 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1411C1CD0E042007740A0 /* AccountController.swift */; };
 		B4A7A8481CD1C82A00F46C44 /* TokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A7A8471CD1C82A00F46C44 /* TokenTest.swift */; };
+		B4A7A84B1CD1CCDE00F46C44 /* AccountTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A7A84A1CD1CCDE00F46C44 /* AccountTest.swift */; };
+		B4A7A84D1CD1CFB300F46C44 /* AuthenticationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A7A84C1CD1CFB300F46C44 /* AuthenticationTest.swift */; };
 		B4A840001CD13020005CE27F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A83FFF1CD13020005CE27F /* Token.swift */; };
 		B4A840081CD14479005CE27F /* JsonLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840071CD14479005CE27F /* JsonLibrary.swift */; };
 		B4A8400A1CD1464C005CE27F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840091CD1464C005CE27F /* Account.swift */; };
@@ -57,6 +59,8 @@
 		2AB141101CD0D0CE007740A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB1411C1CD0E042007740A0 /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		B4A7A8471CD1C82A00F46C44 /* TokenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTest.swift; sourceTree = "<group>"; };
+		B4A7A84A1CD1CCDE00F46C44 /* AccountTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTest.swift; sourceTree = "<group>"; };
+		B4A7A84C1CD1CFB300F46C44 /* AuthenticationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationTest.swift; sourceTree = "<group>"; };
 		B4A83FFF1CD13020005CE27F /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		B4A840071CD14479005CE27F /* JsonLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonLibrary.swift; sourceTree = "<group>"; };
 		B4A840091CD1464C005CE27F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				2AB141051CD0D0CE007740A0 /* Info.plist */,
 				B4A8401F1CD18A74005CE27F /* JsonLibraryTest.swift */,
 				B4A7A8471CD1C82A00F46C44 /* TokenTest.swift */,
+				B4A7A84A1CD1CCDE00F46C44 /* AccountTest.swift */,
+				B4A7A84C1CD1CFB300F46C44 /* AuthenticationTest.swift */,
 			);
 			path = AppfulTests;
 			sourceTree = "<group>";
@@ -333,7 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A840201CD18A74005CE27F /* JsonLibraryTest.swift in Sources */,
+				B4A7A84B1CD1CCDE00F46C44 /* AccountTest.swift in Sources */,
 				B4A7A8481CD1C82A00F46C44 /* TokenTest.swift in Sources */,
+				B4A7A84D1CD1CFB300F46C44 /* AuthenticationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

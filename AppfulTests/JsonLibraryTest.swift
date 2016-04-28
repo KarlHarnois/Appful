@@ -10,7 +10,6 @@ import XCTest
 import Appful
 
 class JsonLibraryTest: XCTestCase {
-
     func testJsonData() {
         let testDictionary = ["testKey": "testValue"]
         let json = jsonData(testDictionary)

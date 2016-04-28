@@ -61,22 +61,22 @@ public class Observable<A> {
     // Subscription API
     // 
     
-    func onStart(setup: () -> Void) -> Observable<A> {
+    public func onStart(setup: () -> Void) -> Observable<A> {
         setup()
         return self
     }
     
-    func onSuccess(handler: A -> Void) -> Observable<A>{
+    public func onSuccess(handler: A -> Void) -> Observable<A>{
         successHandler = handler
         return self
     }
     
-    func onError(handler: ErrorType -> Void) -> Observable<A>{
+    public func onError(handler: ErrorType -> Void) -> Observable<A>{
         errorHandler = handler
         return self
     }
     
-    func onComplete(handler: () -> Void){
+    public func onComplete(handler: () -> Void){
         completionHandler = handler
     }
     
