@@ -8,15 +8,15 @@
 
 import Foundation
 
-class Observable<A> {
-    var success: A? {
+public class Observable<A> {
+    private var success: A? {
         didSet{ process() }
     }
-    var error: ErrorType? {
+    private var error: ErrorType? {
         didSet{ process() }
     }
     
-    var complete: Bool? {
+    private var completionFlag: Bool? {
         didSet{ process() }
     }
     
@@ -27,6 +27,22 @@ class Observable<A> {
     private var successHandler: SuccessHandler?
     private var errorHandler: ErrorHandler?
     private var completionHandler: CompletionHandler?
+    
+    private func process(){
+        if let value = self.success, let handler = successHandler {
+            handler(value)
+        }
+        if let err = self.error, let handler = errorHandler {
+            handler(err)
+        }
+        if let _ = completionFlag, let handler = completionHandler {
+            handler()
+        }
+    }
+    
+    //
+    // Constructors
+    //
     
     init(success: A, error: ErrorType){
         self.success = success
@@ -41,20 +57,14 @@ class Observable<A> {
         return observable
     }
     
-    private func process(){
-        if let value = self.success, let handler = successHandler {
-            handler(value)
-        } else if let err = self.error, let handler = errorHandler {
-            handler(err)
-        }
-        if let _ = complete, let handler = completionHandler {
-            handler()
-        }
-    }
-    
     //
     // Subscription API
     // 
+    
+    func onStart(setup: () -> Void) -> Observable<A> {
+        setup()
+        return self
+    }
     
     func onSuccess(handler: A -> Void) -> Observable<A>{
         successHandler = handler
@@ -68,6 +78,22 @@ class Observable<A> {
     
     func onComplete(handler: () -> Void){
         completionHandler = handler
+    }
+    
+    //
+    // Setters API
+    //
+    
+    func success(value: A){
+        self.success = value
+    }
+    
+    func error(value: ErrorType){
+        self.error = value
+    }
+    
+    func complete(){
+        self.completionFlag = true
     }
 }
 

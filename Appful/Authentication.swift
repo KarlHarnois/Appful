@@ -8,23 +8,31 @@
 
 import Foundation
 
-func authentication(email: String, _ password: String) -> Observable<User?>{
+//
+// API
+//
+
+public func authentication(email: String, _ password: String) -> Observable<User?>{
     return tokenObservable(email, password).flatMap(userObservable)
 }
+
+//
+// private Observables
+//
 
 private func tokenObservable(email: String, _ password: String) -> Observable<String> {
     return Observable.create{ observer in
         fetchToken(email, password){ data, _, error in
             if let err = error {
-                observer.error = err
+                observer.error(err)
             } else if let jsonData = data{
                 if let authenticationToken = token(jsonData) {
-                    observer.success = authenticationToken
+                    observer.success(authenticationToken)
                 }
             } else {
-                observer.complete = true
+                observer.complete()
             }
-        }
+        }?.resume()
     }
 }
 
@@ -32,16 +40,18 @@ private func userObservable(token: String) -> Observable<User?> {
     return Observable.create{ observer in
         fetchAccount(token) { data, _, error in
             if let err = error {
-                observer.error = err
+                observer.error(err)
             } else if let jsonData = data {
                 if let user = userModel(jsonData) {
-                    observer.success = user
+                    observer.success(user)
                 }
             }
-            observer.complete = true
-        }
+            observer.complete()
+        }?.resume()
     }
 }
+
+
 
 
 

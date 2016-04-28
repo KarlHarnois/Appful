@@ -6,18 +6,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    var user: User? = nil
+    private(set) var user: User? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     @IBAction func perform(sender: AnyObject) {
-        ActivityIndicator.show()
         let email = self.email.text ?? ""
         let password = self.password.text ?? ""
         
         authentication(email, password)
+            .onStart{
+                ActivityIndicator.show()
+            }
             .onSuccess{ user in
                 self.user = user
             }
@@ -26,18 +28,21 @@ class ViewController: UIViewController {
             }
             .onComplete{
                 ActivityIndicator.hide()
-                self.checkUser()
+                mainQueue{ self.showAccountController() }
             }
     }
     
-    private func checkUser() {
-        dispatch_sync(dispatch_get_main_queue()) {
-            if self.user == nil {
-                self.showAuthenticationError()
-            } else {
-                self.performSegueWithIdentifier("showAccount", sender: self)
-            }
+    private func showAccountController() {
+        if user == nil {
+            showAuthenticationError()
+        } else {
+            performSegueWithIdentifier("showAccount", sender: self)
         }
+    }
+    
+    private func showAuthenticationError() {
+        let alert = alertController("Authentication Failed", "Wrong email/password")
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -45,18 +50,9 @@ class ViewController: UIViewController {
             destination.user = self.user
         }
     }
-
-    private func showAuthenticationError() {
-        let dismiss = UIAlertAction(title: "OK", style: .Default){ _ in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
-        let alert = UIAlertController(title: "Authentication Failed",
-                                                      message: "Wrong email/password",
-                                                      preferredStyle: .Alert)
-        alert.addAction(dismiss)
-        presentViewController(alert, animated: true, completion: nil)
-    }
 }
+
+
 
 
 

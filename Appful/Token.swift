@@ -12,11 +12,15 @@ import Foundation
 // API
 //
 
-func fetchToken(email: String, _ password: String, _ completionHandler: JsonTaskCompletionHandler) {
-    fetchTokenDataTask(email, password, completionHandler)?.resume()
+public func fetchToken(email: String,
+                     _ password: String,
+                     _ completionHandler: JsonTaskCompletionHandler) -> NSURLSessionDataTask? {
+    return authenticationRequest(email, password).flatMap{ request in
+        jsonDataTask(request, completionHandler: completionHandler)
+    }
 }
 
-func token(json: NSData) -> String? {
+public func token(json: NSData) -> String? {
     return jsonDictionary(json).flatMap{ dictionary in
         dictionary["token"] as? String
     }
@@ -25,14 +29,6 @@ func token(json: NSData) -> String? {
 //
 // Authentication Logic
 //
-
-private func fetchTokenDataTask(email: String,
-                              _ password: String,
-                              _ completionHandler: JsonTaskCompletionHandler) -> NSURLSessionDataTask? {
-    return authenticationRequest(email, password).flatMap{ request in
-        jsonDataTask(request, completionHandler: completionHandler)
-    }
-}
 
 private func authenticationRequest(email: String, _ password: String) -> NSURLRequest? {
     let dictionary = ["email": email, "password": password]

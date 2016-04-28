@@ -12,18 +12,9 @@ import Foundation
 // JSON
 //
 
-typealias JsonDictionary = [String: AnyObject]
+public typealias JsonDictionary = [String: AnyObject]
 
-func jsonDictionary(json: NSData) -> JsonDictionary? {
-    do {
-        return  try NSJSONSerialization.JSONObjectWithData(json, options: []) as? JsonDictionary
-    } catch {
-        print(error)
-        return nil
-    }
-}
-
-func jsonData(dict: [String: String]) -> NSData? {
+public func jsonData(dict: [String: String]) -> NSData? {
     do {
         return try NSJSONSerialization.dataWithJSONObject(dict, options: .PrettyPrinted)
     } catch {
@@ -32,12 +23,20 @@ func jsonData(dict: [String: String]) -> NSData? {
     }
 }
 
+public func jsonDictionary(json: NSData) -> JsonDictionary? {
+    do {
+        return  try NSJSONSerialization.JSONObjectWithData(json, options: []) as? JsonDictionary
+    } catch {
+        print(error)
+        return nil
+    }
+}
 
 //
 // Request
 //
 
-func mutableRequest(urlString: String) -> NSMutableURLRequest? {
+public func mutableRequest(urlString: String) -> NSMutableURLRequest? {
     let url = NSURL(string: urlString)
     guard let currentURL = url else { return nil }
     return  NSMutableURLRequest(URL: currentURL)
@@ -47,9 +46,9 @@ func mutableRequest(urlString: String) -> NSMutableURLRequest? {
 // Data task
 //
 
-typealias JsonTaskCompletionHandler = (NSData?, NSURLResponse?, NSError?) -> Void
+public typealias JsonTaskCompletionHandler = (NSData?, NSURLResponse?, NSError?) -> Void
 
-func jsonDataTask(request: NSURLRequest, completionHandler: JsonTaskCompletionHandler) -> NSURLSessionDataTask {
+public func jsonDataTask(request: NSURLRequest, completionHandler: JsonTaskCompletionHandler) -> NSURLSessionDataTask {
     return NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: completionHandler)
 }
 

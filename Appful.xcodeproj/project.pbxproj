@@ -12,16 +12,17 @@
 		2AB140F41CD0D0CE007740A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB140F21CD0D0CE007740A0 /* Main.storyboard */; };
 		2AB140F61CD0D0CE007740A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB140F51CD0D0CE007740A0 /* Assets.xcassets */; };
 		2AB140F91CD0D0CE007740A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB140F71CD0D0CE007740A0 /* LaunchScreen.storyboard */; };
-		2AB141041CD0D0CE007740A0 /* AppfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB141031CD0D0CE007740A0 /* AppfulTests.swift */; };
 		2AB1410F1CD0D0CE007740A0 /* AppfulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1410E1CD0D0CE007740A0 /* AppfulUITests.swift */; };
 		2AB1411D1CD0E042007740A0 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1411C1CD0E042007740A0 /* AccountController.swift */; };
+		B4A7A8481CD1C82A00F46C44 /* TokenTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A7A8471CD1C82A00F46C44 /* TokenTest.swift */; };
 		B4A840001CD13020005CE27F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A83FFF1CD13020005CE27F /* Token.swift */; };
 		B4A840081CD14479005CE27F /* JsonLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840071CD14479005CE27F /* JsonLibrary.swift */; };
 		B4A8400A1CD1464C005CE27F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840091CD1464C005CE27F /* Account.swift */; };
-		B4A8400E1CD15C7A005CE27F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8400D1CD15C7A005CE27F /* ActivityIndicator.swift */; };
+		B4A8400E1CD15C7A005CE27F /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8400D1CD15C7A005CE27F /* Misc.swift */; };
 		B4A840101CD16371005CE27F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8400F1CD16371005CE27F /* Authentication.swift */; };
 		B4A840141CD170C9005CE27F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840131CD170C9005CE27F /* Observable.swift */; };
 		B4A8401A1CD187F7005CE27F /* Observable_flatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A840191CD187F7005CE27F /* Observable_flatMap.swift */; };
+		B4A840201CD18A74005CE27F /* JsonLibraryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8401F1CD18A74005CE27F /* JsonLibraryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,19 +51,20 @@
 		2AB140F81CD0D0CE007740A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AB140FA1CD0D0CE007740A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB140FF1CD0D0CE007740A0 /* AppfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppfulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2AB141031CD0D0CE007740A0 /* AppfulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppfulTests.swift; sourceTree = "<group>"; };
 		2AB141051CD0D0CE007740A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB1410A1CD0D0CE007740A0 /* AppfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppfulUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB1410E1CD0D0CE007740A0 /* AppfulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppfulUITests.swift; sourceTree = "<group>"; };
 		2AB141101CD0D0CE007740A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB1411C1CD0E042007740A0 /* AccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		B4A7A8471CD1C82A00F46C44 /* TokenTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTest.swift; sourceTree = "<group>"; };
 		B4A83FFF1CD13020005CE27F /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		B4A840071CD14479005CE27F /* JsonLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonLibrary.swift; sourceTree = "<group>"; };
 		B4A840091CD1464C005CE27F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		B4A8400D1CD15C7A005CE27F /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		B4A8400D1CD15C7A005CE27F /* Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
 		B4A8400F1CD16371005CE27F /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		B4A840131CD170C9005CE27F /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		B4A840191CD187F7005CE27F /* Observable_flatMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable_flatMap.swift; sourceTree = "<group>"; };
+		B4A8401F1CD18A74005CE27F /* JsonLibraryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonLibraryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				2AB140EE1CD0D0CE007740A0 /* AppDelegate.swift */,
-				B4A8400D1CD15C7A005CE27F /* ActivityIndicator.swift */,
-				B4A840181CD181BC005CE27F /* Observable */,
+				B4A8400D1CD15C7A005CE27F /* Misc.swift */,
+				B4A7A8441CD1A0A000F46C44 /* Observable */,
 				B4A840151CD179A1005CE27F /* Networking */,
 				B4A840021CD142F7005CE27F /* Controllers */,
 				B4A840011CD142E2005CE27F /* Resources */,
@@ -126,8 +128,9 @@
 		2AB141021CD0D0CE007740A0 /* AppfulTests */ = {
 			isa = PBXGroup;
 			children = (
-				2AB141031CD0D0CE007740A0 /* AppfulTests.swift */,
 				2AB141051CD0D0CE007740A0 /* Info.plist */,
+				B4A8401F1CD18A74005CE27F /* JsonLibraryTest.swift */,
+				B4A7A8471CD1C82A00F46C44 /* TokenTest.swift */,
 			);
 			path = AppfulTests;
 			sourceTree = "<group>";
@@ -139,6 +142,15 @@
 				2AB141101CD0D0CE007740A0 /* Info.plist */,
 			);
 			path = AppfulUITests;
+			sourceTree = "<group>";
+		};
+		B4A7A8441CD1A0A000F46C44 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				B4A840131CD170C9005CE27F /* Observable.swift */,
+				B4A840191CD187F7005CE27F /* Observable_flatMap.swift */,
+			);
+			name = Observable;
 			sourceTree = "<group>";
 		};
 		B4A840011CD142E2005CE27F /* Resources */ = {
@@ -170,15 +182,6 @@
 				B4A8400F1CD16371005CE27F /* Authentication.swift */,
 			);
 			name = Networking;
-			sourceTree = "<group>";
-		};
-		B4A840181CD181BC005CE27F /* Observable */ = {
-			isa = PBXGroup;
-			children = (
-				B4A840131CD170C9005CE27F /* Observable.swift */,
-				B4A840191CD187F7005CE27F /* Observable_flatMap.swift */,
-			);
-			name = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +324,7 @@
 				B4A840001CD13020005CE27F /* Token.swift in Sources */,
 				B4A840081CD14479005CE27F /* JsonLibrary.swift in Sources */,
 				B4A8400A1CD1464C005CE27F /* Account.swift in Sources */,
-				B4A8400E1CD15C7A005CE27F /* ActivityIndicator.swift in Sources */,
+				B4A8400E1CD15C7A005CE27F /* Misc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AB141041CD0D0CE007740A0 /* AppfulTests.swift in Sources */,
+				B4A840201CD18A74005CE27F /* JsonLibraryTest.swift in Sources */,
+				B4A7A8481CD1C82A00F46C44 /* TokenTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Appful/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.godynamo.Appful;
@@ -474,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Appful/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.godynamo.Appful;
@@ -485,10 +491,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppfulTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.godynamo.AppfulTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Appful.app/Appful";
 			};
 			name = Debug;
@@ -497,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = AppfulTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.godynamo.AppfulTests;

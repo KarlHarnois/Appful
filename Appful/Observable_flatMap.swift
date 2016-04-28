@@ -13,23 +13,27 @@ extension Observable {
         return Observable<B>.create{ observer in
             return self
                 .onSuccess{ (x: A) in
-                    let observable: Observable<B> = f(x)
-                    observable
-                        .onSuccess{ (y: B) in
-                            observer.success = y
+                    f(x).onSuccess{ (y: B) in
+                            observer.success(y)
                         }
                         .onError{ error in
-                            observer.error = error
+                            observer.error(error)
                         }
                         .onComplete{
-                            observer.complete = true
-                    }
+                            observer.complete()
+                        }
                 }
                 .onError{ error in
-                    observer.error = error
+                    observer.error(error)
+                    observer.complete() // temporary solution for self.onComplete()
                 }
                 .onComplete{
-            }
+                    /*
+                     Will need to find a solution
+                     else the first onComplete() will never get called
+                    */
+                }
         }
     }
 }
+
